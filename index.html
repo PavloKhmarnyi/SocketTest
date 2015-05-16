@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Web socket</title>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+
+        <div class="carousel slide" id="myCarousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="container">
+                        <form name="form1">
+                            <input type="text" name="message" style="text-align: left" onfocusout="messageFocusOut()"/>
+                            <input type="submit" class="btn btn-primary" value="Send" data-target="#myCarousel" data-slide-to="1"
+                                    onclick="btnSend()"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container">
+                        <button text="Send more" class="btn btn-success" data-target="#myCarousel" data-slide-to="0"
+                                onclick="btnSendMore()">Send more</button>
+                        <div id="subscribe"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="SocketTest.js"></script>
+
+    </body>
+</html>
